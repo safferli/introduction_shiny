@@ -30,7 +30,7 @@ background-size: 100%;
 
 
 <p style="color: #13DAEC; font-family: 'Lato', sans-serif; font-size: 150%; margin: 0 0 10% 0;">
-  Game Analytics <br />
+  R Shiny dashboards <br />
   <span style="font-size: 80%;">a practical introduction</span>
 </p>
 
@@ -54,5 +54,46 @@ background-size: 100%;
 ## Ubisoft Blue Byte
 
 
+
+
+
+
+
+--- &vertical
+
+## Live Operation Games
+
+- large online component
+- not only f2p games: hybrid and all (future) AAA games
+- continuous updating and balancing of the game
+- need for data
+
+***
+
+<img src="assets/img/dontworry.jpg" />
+
+***
+
+### Free to Play 
+
+> freemium: the '-mium' is Latin for 'not really'
+
+Southpark, [Season 18, Episode 6](http://southpark.cc.com/full-episodes/s18e06-freemium-isnt-free)
+
+<img src="assets/img/southpark_f2p.gif" />
+
+***
+
+- f2p is a *business model*, not a game type
+- time vs money: opens game to a larger audience
+- gives customers more impact on gameplay
+- *Extra Credits* on 
+  - Microtransactions https://www.youtube.com/watch?v=WXA559KNopI&hd=1
+  - Doing Free to Play Wrong https://www.youtube.com/watch?v=Mhz9OXy86a0&hd=1
+
+
+---
+
+## data collection
 
 

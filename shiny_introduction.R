@@ -9,5 +9,5 @@ library(slidify)
 wd <- "D:/github/introduction_shiny"
 setwd(wd)
 
-author("shiny-introdcution")
+author("shiny-introduction")
 slidify("index.Rmd")
