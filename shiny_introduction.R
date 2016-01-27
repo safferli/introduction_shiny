@@ -6,8 +6,8 @@
 
 library(slidify)
 
-wd <- "D:/github/introduction_gameanalytics"
+wd <- "D:/github/introduction_shiny"
 setwd(wd)
 
-author("game-analytics")
+author("shiny-introdcution")
 slidify("index.Rmd")
