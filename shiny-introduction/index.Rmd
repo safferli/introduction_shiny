@@ -49,51 +49,83 @@ background-size: 100%;
 .reveal h2, .reveal h3 {color: #222222;}
 </style>
 
---- ds:ubi
-
-## Ubisoft Blue Byte
-
-
-
-
-
-
-
 --- &vertical
 
-## Live Operation Games
+## What is Shiny? 
 
-- large online component
-- not only f2p games: hybrid and all (future) AAA games
-- continuous updating and balancing of the game
-- need for data
+> A web application framework for R
+> Turn your analyses into interactive web applications
+> No HTML, CSS, or JavaScript knowledge required
 
-***
+http://shiny.rstudio.com/
 
-<img src="assets/img/dontworry.jpg" />
 
 ***
 
-### Free to Play 
-
-> freemium: the '-mium' is Latin for 'not really'
-
-Southpark, [Season 18, Episode 6](http://southpark.cc.com/full-episodes/s18e06-freemium-isnt-free)
-
-<img src="assets/img/southpark_f2p.gif" />
+<img src="assets/img/sailormoon.gif" />
 
 ***
 
-- f2p is a *business model*, not a game type
-- time vs money: opens game to a larger audience
-- gives customers more impact on gameplay
-- *Extra Credits* on 
-  - Microtransactions https://www.youtube.com/watch?v=WXA559KNopI&hd=1
-  - Doing Free to Play Wrong https://www.youtube.com/watch?v=Mhz9OXy86a0&hd=1
+<img src="assets/img/shiny.gif" />
+
+R
+
+dynamic graphs
 
 
 ---
 
-## data collection
+## What is it good for? 
+
+asdf
+
+
+---
+
+## Examples of awesomeness
+
+asdf
+
+
+---
+
+## Build your own! 
+
+lognormal distribution: https://safferli.shinyapps.io/Lognormal_distribution/
+
+### ui.R
+
+### server.R
+
+ui.R
+
+shinyUI(fluidPage(
+))
+
+server.R
+
+shinyServer(function(input, output) {
+})
+
+
+
+
+---
+
+## Shiny dashboard
+
+https://rstudio.github.io/shinydashboard/
+
+
+---
+
+## Resources
+
+This gallery contains useful examples to learn from. Visit the Shiny User Showcase to see an inspiring set of sophisticated apps. 
+http://shiny.rstudio.com/gallery/
+http://www.rstudio.com/products/shiny/shiny-user-showcase/
+[Shiny cheatsheet](http://shiny.rstudio.com/articles/cheatsheet.html)
+
+
 
 
