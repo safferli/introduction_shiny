@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Game Analytics</title>
+  <meta name="description" content="">
+  <meta name="author" content="Christoph Safferling">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="stylesheet" href="./frameworks/revealjs/css/reveal.min.css">
+  <link rel="stylesheet" href="./frameworks/revealjs/css/theme/default.css" id="theme">
+  <link rel="stylesheet" href="./highlighters/highlight.js/css/tomorrow.css" id="theme">
+  <!--[if lt IE 9]>
+  <script src="lib/js/html5shiv.js"></script>
+  <![endif]-->  <link rel="stylesheet" href = "assets/css/ribbons.css">
+<link rel="stylesheet" href = "assets/css/ubi.css">
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section class='' data-state='intro' id='slide-1'>
+  
+  <!--
+2015-06-02
+FU Berlin
+
+-->
+
+<!-- adjust background for "intro" slides -->
+
+<style>
+html.intro body {
+background:url("./assets/img/ubi-background.jpg");
+background-position:center;
+background-size: 100%;
+} 
+</style>
+
+<p style="color: #13DAEC; font-family: 'Lato', sans-serif; font-size: 150%; margin: 0 0 10% 0;">
+  Game Analytics <br />
+  <span style="font-size: 80%;">a practical introduction</span>
+</p>
+
+<p style="font-size: 100%; color: #000000;">
+  Christoph Safferling
+</p>
+
+<p style="font-size: 80%; margin: 3% 0 0 0; color: #222222;">
+  Head of Game Analytics <br/ > 
+  Ubisoft Blue Byte
+</p>
+
+<!-- fuck CSS... why can't I include this in a custom CSS? -->
+
+<style>
+.reveal {color: #231F20;}
+.reveal h2, .reveal h3 {color: #222222;}
+</style>
+
+</section>
+<section class='' data-state='ubi' id='slide-2'>
+  <h2>Ubisoft Blue Byte</h2>
+  <ul>
+<li>founded in 1988, best known for the <em>Settlers</em> and <em>Anno</em> brand</li>
+<li>fully acquired by Ubisoft in 2001</li>
+<li>online games since 2010</li>
+<li>newest title: <a href="https://itunes.apple.com/nz/app/assassins-creed-identity/id880971164?mt=8">Assassin&#39;s Creed: Identity</a> 
+(mobile)</li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-3'>
+  <h2>Christoph Safferling</h2>
+  <ul>
+<li>since 2012: Head of Game Analytics at Blue Byte</li>
+<li>PhD in economics: <a href="http://kops.uni-konstanz.de/handle/123456789/17259?locale-attribute=en">Three Essays on the Economics of Online Games</a></li>
+<li>research specialties: personnel economics, incentive theory, industrial organisation</li>
+<li>academic papers available at <a href="https://ideas.repec.org/f/psa961.html">repec.org</a></li>
+<li>contact:
+
+<ul>
+<li>mail: <a href="mailto:christoph.safferling@ubisoft.com">christoph.safferling@ubisoft.com</a></li>
+<li>Twitter: <a href="https://twitter.com/safferli">@safferli</a> </li>
+<li>LinkedIn: <a href="https://www.linkedin.com/in/safferling">https://www.linkedin.com/in/safferling</a> </li>
+</ul></li>
+</ul>
+
+</section>
+<section>
+   <section class='' data-state=''>
+    <h2>Live Operation Games</h2>
+    <ul>
+<li>large online component</li>
+<li>not only f2p games: hybrid and all (future) AAA games</li>
+<li>continuous updating and balancing of the game</li>
+<li>need for data</li>
+</ul>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <p><img src="assets/img/dontworry.jpg" /></p>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <h3>Free to Play</h3>
+
+<blockquote>
+<p>freemium: the &#39;-mium&#39; is Latin for &#39;not really&#39;</p>
+</blockquote>
+
+<p>Southpark, <a href="http://southpark.cc.com/full-episodes/s18e06-freemium-isnt-free">Season 18, Episode 6</a></p>
+
+<p><img src="assets/img/southpark_f2p.gif" /></p>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <ul>
+<li>f2p is a <em>business model</em>, not a game type</li>
+<li>time vs money: opens game to a larger audience</li>
+<li>gives customers more impact on gameplay</li>
+<li><em>Extra Credits</em> on 
+
+<ul>
+<li>Microtransactions <a href="https://www.youtube.com/watch?v=WXA559KNopI&amp;hd=1">https://www.youtube.com/watch?v=WXA559KNopI&amp;hd=1</a></li>
+<li>Doing Free to Play Wrong <a href="https://www.youtube.com/watch?v=Mhz9OXy86a0&amp;hd=1">https://www.youtube.com/watch?v=Mhz9OXy86a0&amp;hd=1</a></li>
+</ul></li>
+</ul>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+</section>
+<section class='' data-state='' id='slide-5'>
+  <h2>data collection</h2>
+  <!--
+- tracking, Kafka, Hadoop
+- realtime Storm, Samza
+-->
+
+<!-- <img src="assets/img/server-setup.png" /> -->
+
+<p><img src="assets/img/dwh20-chengdu.png" /></p>
+
+</section>
+<section>
+   <section class='' data-state=''>
+    <h2>Data Scientists</h2>
+    <blockquote>
+<p>[A data scientist is] a high-ranking professional with the training and 
+curiosity to make discoveries in the world of big data.</p>
+</blockquote>
+
+<p>Data Scientist: the sexiest job of the 21st century, 
+<a href="https://hbr.org/2012/10/data-scientist-the-sexiest-job-of-the-21st-century/">Harvard Business Review, Oct 2012</a></p>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <p><img src="assets/img/barycentric-triangle.png" /></p>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <p><img src="assets/img/data-scientist-triangle.png" /></p>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <h3>Skills sought after</h3>
+
+<ul>
+<li>domain knowledge and experience</li>
+<li><em>&quot;mitdenken&quot;</em>: think and act independently, and ahead</li>
+<li>statistics and mathematics</li>
+<li>Linux and scripting, mostly R and Python</li>
+<li>database (SQL and NoSQL, Hadoop) knowledge</li>
+<li>communication and presentation skills</li>
+</ul>
+
+<!-- you specifically do *not* need Excel! -->
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <p><img src="assets/img/all-the-things.jpg" /></p>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+</section>
+<section>
+   <section class='' data-state=''>
+    <h2>Game Analytics</h2>
+    <ul>
+<li>provide data, data support, and insights to all
+
+<ul>
+<li>managers</li>
+<li>game designers</li>
+<li>marketing</li>
+<li>CRM/support</li>
+<li>LiveOps team (including programmers)</li>
+</ul></li>
+<li>educate on data and data usage</li>
+</ul>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <h3>fancy shit!</h3>
+
+<ul>
+<li>Shiny R: <a href="http://127.0.0.1:7471/">ACID mission dashboard</a></li>
+<li>iPython data notebooks: <a href="https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks">https://github.com/ipython/ipython/wiki/A-gallery-of-interesting-IPython-Notebooks</a></li>
+</ul>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+</section>
+<section class='' data-state='' id='slide-8'>
+  <h2>Conclusion</h2>
+  <ul>
+<li>modern games rely on data for game design and monetisation</li>
+<li>game analytics provides these data (with interpretations)</li>
+<li>cross-section of all game development departments</li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-9'>
+  <h2>...questions?</h2>
+  <p><img src="assets/img/cat-menacing.gif" /></p>
+
+</section>
+<section class='' data-state='' id='slide-10'>
+  <h2>Thank you</h2>
+  <p><img src="assets/img/dankeschoen.jpg" /></p>
+
+<!-- &hellip;and we're hiring! &#9786; 
+ &#128522; &#128512; -->
+
+</section>
+    </div>
+  </div>
+</body>
+  <script src="./frameworks/revealjs/lib/js/head.min.js"></script>
+  <script src="./frameworks/revealjs/js/reveal.min.js"></script>
+  <script>
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    theme: Reveal.getQueryHash().theme || 'default', 
+    transition: Reveal.getQueryHash().transition || 'default', 
+    dependencies: [
+    // Cross-browser shim that fully implements classList -
+    // https://github.com/eligrey/classList.js/
+      { src: './frameworks/revealjs/lib/js/classList.js', condition: function() { return !document.body.classList;}},
+      // Zoom in and out with Alt+click
+      { src: './frameworks/revealjs/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Speaker notes
+      { src: './frameworks/revealjs/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Remote control your reveal.js presentation using a touch device
+      //{ src: './frameworks/revealjs/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+      ]
+  });
+  </script>  <!-- LOAD HIGHLIGHTER JS FILES -->
+<script src="./highlighters/highlight.js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- DONE LOADING HIGHLIGHTER JS FILES -->
+ 
+
+</html>
