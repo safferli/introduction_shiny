@@ -47,6 +47,11 @@ background-size: 100%;
 <style>
 .reveal {color: #231F20;}
 .reveal h2, .reveal h3 {color: #222222;}
+.gif150
+{
+  width: 150%;
+  height: auto;
+}
 </style>
 
 --- &vertical
@@ -62,11 +67,11 @@ http://shiny.rstudio.com/
 
 ***
 
-<img src="assets/img/sailormoon.gif" />
+<img src="assets/img/sailormoon.gif" class="gif150" />
 
 ***
 
-<img src="assets/img/shiny.gif" />
+<img src="assets/img/shiny.gif" class="gif150" />
 
 
 
@@ -240,7 +245,7 @@ shinyServer(
 
 ---
 
-<img src="assets/img/free-roar.gif" />
+<img src="assets/img/free-roar.gif" class="gif150" />
 
 
 
