@@ -53,9 +53,9 @@ background-size: 100%;
 
 ## What is Shiny? 
 
-> A web application framework for R
-> Turn your analyses into interactive web applications
-> No HTML, CSS, or JavaScript knowledge required
+> A web application framework for R  
+> Turn your analyses into interactive web application. 
+> No HTML, CSS, or JavaScript knowledge required  
 
 http://shiny.rstudio.com/
 
@@ -78,46 +78,82 @@ http://shiny.rstudio.com/
 - reporting 
 - dashboarding
 - provide non-specialist access to data
-- [make games!](http://deanattali.com/blog/shiny-game-lightsout/)
+- [make games](http://deanattali.com/blog/shiny-game-lightsout/)!
+- free!
 
 
 ---
 
 ## Examples of awesomeness
 
-- DUS Game Analytics dashboard: http://10.130.64.74:3838/
+- DUS Game Analytics dashboards
+    - http://10.130.64.74:3838/
 - [retention dashboard](http://10.130.64.74:3838/apps/retention_dashboard/)
 - [Anno 2205 online features](http://10.130.64.74:3838/apps/anno6_online_features_dashboard/)
 - [Anno 2205 quest dashbaord](http://10.130.64.74:3838/apps/anno6_quest_dashboard/)
 
 
----
+--- &vertical
 
 ## Build your own! 
 
 - what do you need? 
     - R
     - a server 
-    - minimal code: ui.R and server.R
+    - minimal code: `ui.R` and `server.R`
 - lognormal distribution: https://safferli.shinyapps.io/Lognormal_distribution/
 
+***
 
 ### minimal code
 
-#### ui.R
+**ui.R**
 
 ```{r, eval=FALSE}
 shinyUI(fluidPage(
 ))
 ```
 
-#### server.R
+**server.R**
 
 ```{r, eval=FALSE}
 shinyServer(function(input, output) {
 })
 ```
 
+***
+
+### ui.R
+
+```{r, eval=FALSE}
+shinyUI(fluidPage(
+  sidebarLayout(
+    sidebarPanel(
+      sliderInput("pt.mu.input"),
+      sliderInput("pt.sd.input")
+    ),
+    mainPanel(
+      plotOutput("plot")
+    )
+    )))
+```
+
+### server.R
+
+```{r, eval=FALSE}
+shinyServer(
+  function(input, output) {
+    output$plot <- renderPlot({
+      
+      pt.mu <- input$pt.mu.input
+      pt.sd <- input$pt.sd.input
+      ggplot(...)  
+    }) 
+  }
+)
+```
+
+***
 
 ### ui.R
 
@@ -151,6 +187,8 @@ shinyUI(fluidPage(
 ))
 ```
 
+***
+
 ### server.R
 
 ```{r, eval=FALSE}
@@ -167,7 +205,6 @@ shinyServer(
       grid <- data.frame(x.data = seq(0, 500, 0.1)) %>% 
         mutate(
           ln.data = dlnorm(x.data, meanlog=log(pt.mu), sdlog=pt.sd)
-          #ln.sample = rlnorm(x.data, meanlog=pt.mu, sdlog=pt.sd)
         )
       
       grid %>% ggplot()+
@@ -200,6 +237,10 @@ shinyServer(
 - fancy examples: http://www.rstudio.com/products/shiny/shiny-user-showcase/
 - code to all our dashboards: https://gitlab-ncsa.ubisoft.org/bb-analytics/shiny-dashboards 
 
+
+---
+
+<img src="assets/img/free-roar.gif" />
 
 
 

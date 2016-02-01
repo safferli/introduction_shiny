@@ -37,7 +37,7 @@ background-size: 100%;
 </style>
 
 <p style="color: #13DAEC; font-family: 'Lato', sans-serif; font-size: 150%; margin: 0 0 10% 0;">
-  Game Analytics <br />
+  R Shiny dashboards <br />
   <span style="font-size: 80%;">a practical introduction</span>
 </p>
 
@@ -58,9 +58,226 @@ background-size: 100%;
 </style>
 
 </section>
-<section class='' data-state='ubi' id='slide-2'>
-  <h2>Ubisoft Blue Byte</h2>
+<section>
+   <section class='' data-state=''>
+    <h2>What is Shiny?</h2>
+    <blockquote>
+<p>A web application framework for R<br>
+Turn your analyses into interactive web application. 
+No HTML, CSS, or JavaScript knowledge required  </p>
+</blockquote>
+
+<p><a href="http://shiny.rstudio.com/">http://shiny.rstudio.com/</a></p>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <p><img src="assets/img/sailormoon.gif" /></p>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <p><img src="assets/img/shiny.gif" /></p>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+</section>
+<section class='' data-state='' id='slide-3'>
+  <h2>What is it good for?</h2>
+  <ul>
+<li>dynamic R output</li>
+<li>reporting </li>
+<li>dashboarding</li>
+<li>provide non-specialist access to data</li>
+<li><a href="http://deanattali.com/blog/shiny-game-lightsout/">make games</a>!</li>
+<li>free!</li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-4'>
+  <h2>Examples of awesomeness</h2>
+  <ul>
+<li>DUS Game Analytics dashboards
+
+<ul>
+<li><a href="http://10.130.64.74:3838/">http://10.130.64.74:3838/</a></li>
+</ul></li>
+<li><a href="http://10.130.64.74:3838/apps/retention_dashboard/">retention dashboard</a></li>
+<li><a href="http://10.130.64.74:3838/apps/anno6_online_features_dashboard/">Anno 2205 online features</a></li>
+<li><a href="http://10.130.64.74:3838/apps/anno6_quest_dashboard/">Anno 2205 quest dashbaord</a></li>
+</ul>
+
+</section>
+<section>
+   <section class='' data-state=''>
+    <h2>Build your own!</h2>
+    <ul>
+<li>what do you need? 
+
+<ul>
+<li>R</li>
+<li>a server </li>
+<li>minimal code: <code>ui.R</code> and <code>server.R</code></li>
+</ul></li>
+<li>lognormal distribution: <a href="https://safferli.shinyapps.io/Lognormal_distribution/">https://safferli.shinyapps.io/Lognormal_distribution/</a></li>
+</ul>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <h3>minimal code</h3>
+
+<p><strong>ui.R</strong></p>
+
+<pre><code class="r">shinyUI(fluidPage(
+))
+</code></pre>
+
+<p><strong>server.R</strong></p>
+
+<pre><code class="r">shinyServer(function(input, output) {
+})
+</code></pre>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <h3>ui.R</h3>
+
+<pre><code class="r">shinyUI(fluidPage(
+  sidebarLayout(
+    sidebarPanel(
+      sliderInput(&quot;pt.mu.input&quot;),
+      sliderInput(&quot;pt.sd.input&quot;)
+    ),
+    mainPanel(
+      plotOutput(&quot;plot&quot;)
+    )
+    )))
+</code></pre>
+
+<h3>server.R</h3>
+
+<pre><code class="r">shinyServer(
+  function(input, output) {
+    output$plot &lt;- renderPlot({
+
+      pt.mu &lt;- input$pt.mu.input
+      pt.sd &lt;- input$pt.sd.input
+      ggplot(...)  
+    }) 
+  }
+)
+</code></pre>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <h3>ui.R</h3>
+
+<pre><code class="r">shinyUI(fluidPage(
+  titlePanel(&quot;A quick shiny visualisation of a lognormal distribution&quot;),
+
+  sidebarLayout(
+    sidebarPanel(
+      h3(&quot;Input values&quot;),
+      br(),
+
+      sliderInput(&quot;pt.mu.input&quot;, label = (&quot;Chose avg playtime:&quot;),
+                  min = 10, max = 100, value = 45),
+      br(), 
+
+      sliderInput(&quot;pt.sd.input&quot;, label = (&quot;Chose playtime dispersion:&quot;),
+                  min = 0, max = 2.0, value = 0.7, step= 0.1),
+      br()
+    ),
+
+    mainPanel(
+      h1(&quot;Output&quot;),
+
+      (&quot;Playtime follows a log-normal distribution:&quot;),
+      a(&quot;(wikipedia article)&quot;, href=&quot;https://en.wikipedia.org/wiki/Log-normal_distribution&quot;),
+
+      plotOutput(&quot;plot&quot;)
+    )
+  )
+))
+</code></pre>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <h3>server.R</h3>
+
+<pre><code class="r">library(dplyr)
+library(ggplot2)
+
+shinyServer(
+  function(input, output) {
+    output$plot &lt;- renderPlot({
+
+      pt.mu &lt;- input$pt.mu.input
+      pt.sd &lt;- input$pt.sd.input
+
+      grid &lt;- data.frame(x.data = seq(0, 500, 0.1)) %&gt;% 
+        mutate(
+          ln.data = dlnorm(x.data, meanlog=log(pt.mu), sdlog=pt.sd)
+        )
+
+      grid %&gt;% ggplot()+
+        geom_line(aes(x=x.data, y=ln.data))+
+        geom_vline(xintercept = pt.mu, colour=&quot;red&quot;, linetype = &quot;longdash&quot;)+
+        annotate(&quot;text&quot;, x = (pt.mu+5), y = (max(grid$ln.data)), 
+                 label = paste0(&quot;average playtime:\n&quot;, pt.mu, &quot; minutes&quot;), hjust=0)+
+        xlab(&quot;playtime in minutes&quot;)+ylab(&quot;lognormal distribution function&quot;)
+    }) 
+  }
+)
+</code></pre>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+</section>
+<section class='' data-state='' id='slide-6'>
+  <h2>Shiny dashboard</h2>
+  <ul>
+<li><a href="https://rstudio.github.io/shinydashboard/">https://rstudio.github.io/shinydashboard/</a></li>
+<li>standardised and simple way to set up dashboards</li>
+<li>used by us for all new dashboards (from Anno 2205 onwards)</li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-7'>
+  <h2>Resources</h2>
+  <ul>
+<li>tutorial: <a href="http://shiny.rstudio.com/tutorial/">http://shiny.rstudio.com/tutorial/</a></li>
+<li>Shiny cheatsheet: <a href="http://shiny.rstudio.com/articles/cheatsheet.html">http://shiny.rstudio.com/articles/cheatsheet.html</a></li>
+<li>examples: <a href="http://shiny.rstudio.com/gallery/">http://shiny.rstudio.com/gallery/</a></li>
+<li>fancy examples: <a href="http://www.rstudio.com/products/shiny/shiny-user-showcase/">http://www.rstudio.com/products/shiny/shiny-user-showcase/</a></li>
+<li>code to all our dashboards: <a href="https://gitlab-ncsa.ubisoft.org/bb-analytics/shiny-dashboards">https://gitlab-ncsa.ubisoft.org/bb-analytics/shiny-dashboards</a> </li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-8'>
   
+  <p><img src="assets/img/free-roar.gif" /></p>
+
 </section>
     </div>
   </div>
