@@ -15,8 +15,8 @@ revealjs:
 --- ds:intro
 
 <!--
-2016-02-02
-Ubisoft Analytics Summit
+2016-08-16
+Respawn
 -->
 
 <!-- adjust background for "intro" slides -->
@@ -53,6 +53,89 @@ background-size: 100%;
   height: auto;
 }
 </style>
+
+---
+
+## Ubisoft Blue Byte
+
+- founded in 1988, best known for the *Settlers* and *Anno* brand
+- fully acquired by Ubisoft in 2001
+- online games since 2010
+- latest title: [Anno 2205](http://anno-game.ubi.com/anno-2205/de-de/game-info/anno-2205/index.aspx) 
+  (PC)
+- next game: [Champions of Anteria](https://www.ubisoft.com/en-CA/game/champions-of-anteria/)
+
+
+---
+
+## Christoph Safferling
+
+- since 2012: Head of Game Analytics at Blue Byte
+- PhD in economics: [Three Essays on the Economics of Online Games]
+  (http://kops.uni-konstanz.de/handle/123456789/17259?locale-attribute=en)
+- research specialties: personnel economics, incentive theory, industrial organisation
+- academic papers available at [repec.org](https://ideas.repec.org/f/psa961.html)
+- contact:
+  - mail: christoph.safferling@ubisoft.com
+  - LinkedIn: https://www.linkedin.com/in/safferling 
+  - Twitter: [@safferli](https://twitter.com/safferli) 
+  - Github: [@safferli](https://github.com/safferli)
+  - this talk: https://github.com/safferli/introduction_shiny
+
+
+--- &vertical
+
+## Data are treasures?
+
+- get data
+- analyse it!
+- many different libraries etc (hicharts etc)
+- R is known for being great with graphs
+
+***
+
+## But... I'm creative! I don't need data! 
+
+<!-- if you want to be an Indie developer, make your first games on someone else's budget. You don't want to make all those early mistakes on your own budget! -->
+
+<!-- being an indie doesn't mean you can do what you want -- investor wants something, banks want something, unless you have your own money and you're willing to spend that -->
+
+***
+
+<img src="assets/img/archer-slap.gif" class="gif150" />
+
+<!--
+
+***
+
+### Why will you want data? 
+
+- market estimation/business case
+  - *"even if you are prepared to wait for two and a half years to see the money come in, 69% of indie games are going to lose money"* -- [Cliff Harris](http://positech.co.uk/cliffsblog/2016/01/06/random-but-fun-indie-game-data-sampling/)
+  - no business case, no money
+- game design 
+  - confirm your expectations/calculations
+  - what do your players actually like?
+  - progression is one of the key GD principles... it's tricky and hard work! 
+
+<!-- you're studying here, which is the most expensive thing you will be doing (short of having kids, which will also study)... so you want this to pay off, right? -->
+
+***
+
+### Getting data
+
+<!-- - mods!
+  - steam workshop
+  - Paradox, Cities Skylines finding most-desired features from modders
+-->
+
+<!-- like Steam store data, mod -->
+- internal vs. external data
+- [Google analytics](http://www.google.com/analytics/#?modal_active=none) (web, and many external pages) 
+- Steam [Stats and Achievements](https://partner.steamgames.com/documentation/ugs)
+- mobile analytics (e.g. [Flurry/Yahoo](https://developer.yahoo.com/), [Tune/HasOffers](http://www.hasoffers.com/))
+
+-->
 
 --- &vertical
 
@@ -104,7 +187,7 @@ http://shiny.rstudio.com/
 
 - what do you need? 
     - R
-    - a server 
+    - a server (or use https://www.shinyapps.io/)
     - minimal code: `ui.R` and `server.R`
 - lognormal distribution: https://safferli.shinyapps.io/Lognormal_distribution/
 

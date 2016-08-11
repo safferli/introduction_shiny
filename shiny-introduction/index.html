@@ -22,8 +22,8 @@
       <section class='' data-state='intro' id='slide-1'>
   
   <!--
-2016-02-02
-Ubisoft Analytics Summit
+2016-08-16
+Respawn
 -->
 
 <!-- adjust background for "intro" slides -->
@@ -63,6 +63,120 @@ background-size: 100%;
 </style>
 
 </section>
+<section class='' data-state='' id='slide-2'>
+  <h2>Ubisoft Blue Byte</h2>
+  <ul>
+<li>founded in 1988, best known for the <em>Settlers</em> and <em>Anno</em> brand</li>
+<li>fully acquired by Ubisoft in 2001</li>
+<li>online games since 2010</li>
+<li>latest title: <a href="http://anno-game.ubi.com/anno-2205/de-de/game-info/anno-2205/index.aspx">Anno 2205</a> 
+(PC)</li>
+<li>next game: <a href="https://www.ubisoft.com/en-CA/game/champions-of-anteria/">Champions of Anteria</a></li>
+</ul>
+
+</section>
+<section class='' data-state='' id='slide-3'>
+  <h2>Christoph Safferling</h2>
+  <ul>
+<li>since 2012: Head of Game Analytics at Blue Byte</li>
+<li>PhD in economics: <a href="http://kops.uni-konstanz.de/handle/123456789/17259?locale-attribute=en">Three Essays on the Economics of Online Games</a></li>
+<li>research specialties: personnel economics, incentive theory, industrial organisation</li>
+<li>academic papers available at <a href="https://ideas.repec.org/f/psa961.html">repec.org</a></li>
+<li>contact:
+
+<ul>
+<li>mail: <a href="mailto:christoph.safferling@ubisoft.com">christoph.safferling@ubisoft.com</a></li>
+<li>LinkedIn: <a href="https://www.linkedin.com/in/safferling">https://www.linkedin.com/in/safferling</a> </li>
+<li>Twitter: <a href="https://twitter.com/safferli">@safferli</a> </li>
+<li>Github: <a href="https://github.com/safferli">@safferli</a></li>
+<li>this talk: <a href="https://github.com/safferli/introduction_shiny">https://github.com/safferli/introduction_shiny</a></li>
+</ul></li>
+</ul>
+
+</section>
+<section>
+   <section class='' data-state=''>
+    <h2>Data are treasures?</h2>
+    <ul>
+<li>get data</li>
+<li>analyse it!</li>
+<li>many different libraries etc (hicharts etc)</li>
+<li>R is known for being great with graphs</li>
+</ul>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <h2>But... I&#39;m creative! I don&#39;t need data!</h2>
+
+<!-- if you want to be an Indie developer, make your first games on someone else's budget. You don't want to make all those early mistakes on your own budget! -->
+
+<!-- being an indie doesn't mean you can do what you want -- investor wants something, banks want something, unless you have your own money and you're willing to spend that -->
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <p><img src="assets/img/archer-slap.gif" class="gif150" /></p>
+
+<p>&lt;!--</p>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <h3>Why will you want data?</h3>
+
+<ul>
+<li>market estimation/business case
+
+<ul>
+<li><em>&quot;even if you are prepared to wait for two and a half years to see the money come in, 69% of indie games are going to lose money&quot;</em> -- <a href="http://positech.co.uk/cliffsblog/2016/01/06/random-but-fun-indie-game-data-sampling/">Cliff Harris</a></li>
+<li>no business case, no money</li>
+</ul></li>
+<li>game design 
+
+<ul>
+<li>confirm your expectations/calculations</li>
+<li>what do your players actually like?</li>
+<li>progression is one of the key GD principles... it&#39;s tricky and hard work! </li>
+</ul></li>
+</ul>
+
+<!-- you're studying here, which is the most expensive thing you will be doing (short of having kids, which will also study)... so you want this to pay off, right? -->
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+   <section class='' data-state=''>
+    <h3>Getting data</h3>
+
+<!-- - mods!
+  - steam workshop
+  - Paradox, Cities Skylines finding most-desired features from modders
+-->
+
+<!-- like Steam store data, mod -->
+
+<ul>
+<li>internal vs. external data</li>
+<li><a href="http://www.google.com/analytics/#?modal_active=none">Google analytics</a> (web, and many external pages) </li>
+<li>Steam <a href="https://partner.steamgames.com/documentation/ugs">Stats and Achievements</a></li>
+<li>mobile analytics (e.g. <a href="https://developer.yahoo.com/">Flurry/Yahoo</a>, <a href="http://www.hasoffers.com/">Tune/HasOffers</a>)</li>
+</ul>
+
+<p>--&gt;</p>
+
+    <aside class='notes'>
+      
+    </aside>
+   </section>
+</section>
 <section>
    <section class='' data-state=''>
     <h2>What is Shiny?</h2>
@@ -93,7 +207,7 @@ No HTML, CSS, or JavaScript knowledge required  </p>
     </aside>
    </section>
 </section>
-<section class='' data-state='' id='slide-3'>
+<section class='' data-state='' id='slide-6'>
   <h2>What is it good for?</h2>
   <ul>
 <li>dynamic R output</li>
@@ -105,7 +219,7 @@ No HTML, CSS, or JavaScript knowledge required  </p>
 </ul>
 
 </section>
-<section class='' data-state='' id='slide-4'>
+<section class='' data-state='' id='slide-7'>
   <h2>Examples of awesomeness</h2>
   <ul>
 <li>DUS Game Analytics dashboards
@@ -127,7 +241,7 @@ No HTML, CSS, or JavaScript knowledge required  </p>
 
 <ul>
 <li>R</li>
-<li>a server </li>
+<li>a server (or use <a href="https://www.shinyapps.io/">https://www.shinyapps.io/</a>)</li>
 <li>minimal code: <code>ui.R</code> and <code>server.R</code></li>
 </ul></li>
 <li>lognormal distribution: <a href="https://safferli.shinyapps.io/Lognormal_distribution/">https://safferli.shinyapps.io/Lognormal_distribution/</a></li>
@@ -259,7 +373,7 @@ shinyServer(
     </aside>
    </section>
 </section>
-<section class='' data-state='' id='slide-6'>
+<section class='' data-state='' id='slide-9'>
   <h2>Shiny dashboard</h2>
   <ul>
 <li><a href="https://rstudio.github.io/shinydashboard/">https://rstudio.github.io/shinydashboard/</a></li>
@@ -268,7 +382,7 @@ shinyServer(
 </ul>
 
 </section>
-<section class='' data-state='' id='slide-7'>
+<section class='' data-state='' id='slide-10'>
   <h2>Resources</h2>
   <ul>
 <li>tutorial: <a href="http://shiny.rstudio.com/tutorial/">http://shiny.rstudio.com/tutorial/</a></li>
@@ -279,7 +393,7 @@ shinyServer(
 </ul>
 
 </section>
-<section class='' data-state='' id='slide-8'>
+<section class='' data-state='' id='slide-11'>
   
   <p><img src="assets/img/free-roar.gif" class="gif150" /></p>
 

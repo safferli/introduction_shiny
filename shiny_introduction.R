@@ -6,8 +6,8 @@
 
 library(slidify)
 
-wd <- "D:/github/introduction_shiny"
+wd <- path.expand("~/Documents/github/introduction_shiny")
 setwd(wd)
 
-author("shiny-introduction")
+author("shiny-introduction", use_git = FALSE)
 slidify("index.Rmd")
