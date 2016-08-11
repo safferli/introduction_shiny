@@ -71,16 +71,15 @@ background-size: 100%;
 ## Christoph Safferling
 
 - since 2012: Head of Game Analytics at Blue Byte
-- PhD in economics: [Three Essays on the Economics of Online Games]
-  (http://kops.uni-konstanz.de/handle/123456789/17259?locale-attribute=en)
+- PhD in economics: [Three Essays on the Economics of Online Games](http://kops.uni-konstanz.de/handle/123456789/17259?locale-attribute=en)
 - research specialties: personnel economics, incentive theory, industrial organisation
 - academic papers available at [repec.org](https://ideas.repec.org/f/psa961.html)
 - contact:
-  - mail: christoph.safferling@ubisoft.com
-  - LinkedIn: https://www.linkedin.com/in/safferling 
-  - Twitter: [@safferli](https://twitter.com/safferli) 
-  - Github: [@safferli](https://github.com/safferli)
-  - this talk: https://github.com/safferli/introduction_shiny
+    - mail: christoph.safferling@ubisoft.com
+    - LinkedIn: https://www.linkedin.com/in/safferling 
+    - Twitter: [@safferli](https://twitter.com/safferli) 
+    - Github: [@safferli](https://github.com/safferli)
+    - this talk: https://github.com/safferli/introduction_shiny
 
 
 --- &vertical
@@ -89,6 +88,7 @@ background-size: 100%;
 
 - get data
 - analyse it!
+     - if you have a manager: pretty trumps content!
 - many different libraries etc (hicharts etc)
 - R is known for being great with graphs
 
@@ -134,30 +134,29 @@ http://shiny.rstudio.com/
 - reporting 
 - dashboarding
 - provide non-specialist access to data
-- [make games](http://deanattali.com/blog/shiny-game-lightsout/)!
-- free!
+- [make games](http://deanattali.com/blog/shiny-game-lightsout/)
+- free
 
 
 ---
 
 ## Examples of awesomeness
 
-- DUS Game Analytics dashboards
-    - http://10.130.64.74:3838/
-- [retention dashboard](http://10.130.64.74:3838/apps/retention_dashboard/)
-- [Anno 2205 online features](http://10.130.64.74:3838/apps/anno6_online_features_dashboard/)
-- [Anno 2205 quest dashbaord](http://10.130.64.74:3838/apps/anno6_quest_dashboard/)
+- our own dashboards
+    - ACID mission dashboard
+    - Anno 2205 event sessions
+- https://www.rstudio.com/products/shiny/shiny-user-showcase/ 
 
 
 --- &vertical
 
 ## Build your own! 
 
+- lognormal distribution: https://safferli.shinyapps.io/Lognormal_distribution/
 - what do you need? 
-    - R
+    - R (https://www.r-project.org/)
     - a server (or use https://www.shinyapps.io/)
     - minimal code: `ui.R` and `server.R`
-- lognormal distribution: https://safferli.shinyapps.io/Lognormal_distribution/
 
 ***
 
@@ -291,7 +290,6 @@ shinyServer(
 - Shiny cheatsheet: http://shiny.rstudio.com/articles/cheatsheet.html
 - examples: http://shiny.rstudio.com/gallery/
 - fancy examples: http://www.rstudio.com/products/shiny/shiny-user-showcase/
-- code to all our dashboards: https://gitlab-ncsa.ubisoft.org/bb-analytics/shiny-dashboards 
 
 
 ---

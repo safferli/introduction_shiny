@@ -99,7 +99,11 @@ background-size: 100%;
     <h2>Data are treasures?</h2>
     <ul>
 <li>get data</li>
-<li>analyse it!</li>
+<li>analyse it!
+
+<ul>
+<li>if you have a manager: pretty trumps content!</li>
+</ul></li>
 <li>many different libraries etc (hicharts etc)</li>
 <li>R is known for being great with graphs</li>
 </ul>
@@ -121,56 +125,6 @@ background-size: 100%;
    </section>
    <section class='' data-state=''>
     <p><img src="assets/img/archer-slap.gif" class="gif150" /></p>
-
-<p>&lt;!--</p>
-
-    <aside class='notes'>
-      
-    </aside>
-   </section>
-   <section class='' data-state=''>
-    <h3>Why will you want data?</h3>
-
-<ul>
-<li>market estimation/business case
-
-<ul>
-<li><em>&quot;even if you are prepared to wait for two and a half years to see the money come in, 69% of indie games are going to lose money&quot;</em> -- <a href="http://positech.co.uk/cliffsblog/2016/01/06/random-but-fun-indie-game-data-sampling/">Cliff Harris</a></li>
-<li>no business case, no money</li>
-</ul></li>
-<li>game design 
-
-<ul>
-<li>confirm your expectations/calculations</li>
-<li>what do your players actually like?</li>
-<li>progression is one of the key GD principles... it&#39;s tricky and hard work! </li>
-</ul></li>
-</ul>
-
-<!-- you're studying here, which is the most expensive thing you will be doing (short of having kids, which will also study)... so you want this to pay off, right? -->
-
-    <aside class='notes'>
-      
-    </aside>
-   </section>
-   <section class='' data-state=''>
-    <h3>Getting data</h3>
-
-<!-- - mods!
-  - steam workshop
-  - Paradox, Cities Skylines finding most-desired features from modders
--->
-
-<!-- like Steam store data, mod -->
-
-<ul>
-<li>internal vs. external data</li>
-<li><a href="http://www.google.com/analytics/#?modal_active=none">Google analytics</a> (web, and many external pages) </li>
-<li>Steam <a href="https://partner.steamgames.com/documentation/ugs">Stats and Achievements</a></li>
-<li>mobile analytics (e.g. <a href="https://developer.yahoo.com/">Flurry/Yahoo</a>, <a href="http://www.hasoffers.com/">Tune/HasOffers</a>)</li>
-</ul>
-
-<p>--&gt;</p>
 
     <aside class='notes'>
       
@@ -222,14 +176,13 @@ No HTML, CSS, or JavaScript knowledge required  </p>
 <section class='' data-state='' id='slide-7'>
   <h2>Examples of awesomeness</h2>
   <ul>
-<li>DUS Game Analytics dashboards
+<li>our own dashboards
 
 <ul>
-<li><a href="http://10.130.64.74:3838/">http://10.130.64.74:3838/</a></li>
+<li>ACID mission dashboard</li>
+<li>Anno 2205 event sessions</li>
 </ul></li>
-<li><a href="http://10.130.64.74:3838/apps/retention_dashboard/">retention dashboard</a></li>
-<li><a href="http://10.130.64.74:3838/apps/anno6_online_features_dashboard/">Anno 2205 online features</a></li>
-<li><a href="http://10.130.64.74:3838/apps/anno6_quest_dashboard/">Anno 2205 quest dashbaord</a></li>
+<li><a href="https://www.rstudio.com/products/shiny/shiny-user-showcase/">https://www.rstudio.com/products/shiny/shiny-user-showcase/</a> </li>
 </ul>
 
 </section>
@@ -237,14 +190,14 @@ No HTML, CSS, or JavaScript knowledge required  </p>
    <section class='' data-state=''>
     <h2>Build your own!</h2>
     <ul>
+<li>lognormal distribution: <a href="https://safferli.shinyapps.io/Lognormal_distribution/">https://safferli.shinyapps.io/Lognormal_distribution/</a></li>
 <li>what do you need? 
 
 <ul>
-<li>R</li>
+<li>R (<a href="https://www.r-project.org/">https://www.r-project.org/</a>)</li>
 <li>a server (or use <a href="https://www.shinyapps.io/">https://www.shinyapps.io/</a>)</li>
 <li>minimal code: <code>ui.R</code> and <code>server.R</code></li>
 </ul></li>
-<li>lognormal distribution: <a href="https://safferli.shinyapps.io/Lognormal_distribution/">https://safferli.shinyapps.io/Lognormal_distribution/</a></li>
 </ul>
 
     <aside class='notes'>
@@ -389,7 +342,6 @@ shinyServer(
 <li>Shiny cheatsheet: <a href="http://shiny.rstudio.com/articles/cheatsheet.html">http://shiny.rstudio.com/articles/cheatsheet.html</a></li>
 <li>examples: <a href="http://shiny.rstudio.com/gallery/">http://shiny.rstudio.com/gallery/</a></li>
 <li>fancy examples: <a href="http://www.rstudio.com/products/shiny/shiny-user-showcase/">http://www.rstudio.com/products/shiny/shiny-user-showcase/</a></li>
-<li>code to all our dashboards: <a href="https://gitlab-ncsa.ubisoft.org/bb-analytics/shiny-dashboards">https://gitlab-ncsa.ubisoft.org/bb-analytics/shiny-dashboards</a> </li>
 </ul>
 
 </section>

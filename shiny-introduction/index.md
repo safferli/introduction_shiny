@@ -89,6 +89,7 @@ background-size: 100%;
 
 - get data
 - analyse it!
+     - if you have a manager: pretty trumps content!
 - many different libraries etc (hicharts etc)
 - R is known for being great with graphs
 
@@ -104,38 +105,6 @@ background-size: 100%;
 
 <img src="assets/img/archer-slap.gif" class="gif150" />
 
-<!--
-
-***
-
-### Why will you want data? 
-
-- market estimation/business case
-  - *"even if you are prepared to wait for two and a half years to see the money come in, 69% of indie games are going to lose money"* -- [Cliff Harris](http://positech.co.uk/cliffsblog/2016/01/06/random-but-fun-indie-game-data-sampling/)
-  - no business case, no money
-- game design 
-  - confirm your expectations/calculations
-  - what do your players actually like?
-  - progression is one of the key GD principles... it's tricky and hard work! 
-
-<!-- you're studying here, which is the most expensive thing you will be doing (short of having kids, which will also study)... so you want this to pay off, right? -->
-
-***
-
-### Getting data
-
-<!-- - mods!
-  - steam workshop
-  - Paradox, Cities Skylines finding most-desired features from modders
--->
-
-<!-- like Steam store data, mod -->
-- internal vs. external data
-- [Google analytics](http://www.google.com/analytics/#?modal_active=none) (web, and many external pages) 
-- Steam [Stats and Achievements](https://partner.steamgames.com/documentation/ugs)
-- mobile analytics (e.g. [Flurry/Yahoo](https://developer.yahoo.com/), [Tune/HasOffers](http://www.hasoffers.com/))
-
--->
 
 --- &vertical
 
@@ -174,22 +143,21 @@ http://shiny.rstudio.com/
 
 ## Examples of awesomeness
 
-- DUS Game Analytics dashboards
-    - http://10.130.64.74:3838/
-- [retention dashboard](http://10.130.64.74:3838/apps/retention_dashboard/)
-- [Anno 2205 online features](http://10.130.64.74:3838/apps/anno6_online_features_dashboard/)
-- [Anno 2205 quest dashbaord](http://10.130.64.74:3838/apps/anno6_quest_dashboard/)
+- our own dashboards
+    - ACID mission dashboard
+    - Anno 2205 event sessions
+- https://www.rstudio.com/products/shiny/shiny-user-showcase/ 
 
 
 --- &vertical
 
 ## Build your own! 
 
+- lognormal distribution: https://safferli.shinyapps.io/Lognormal_distribution/
 - what do you need? 
-    - R
+    - R (https://www.r-project.org/)
     - a server (or use https://www.shinyapps.io/)
     - minimal code: `ui.R` and `server.R`
-- lognormal distribution: https://safferli.shinyapps.io/Lognormal_distribution/
 
 ***
 
@@ -329,7 +297,6 @@ shinyServer(
 - Shiny cheatsheet: http://shiny.rstudio.com/articles/cheatsheet.html
 - examples: http://shiny.rstudio.com/gallery/
 - fancy examples: http://www.rstudio.com/products/shiny/shiny-user-showcase/
-- code to all our dashboards: https://gitlab-ncsa.ubisoft.org/bb-analytics/shiny-dashboards 
 
 
 ---
