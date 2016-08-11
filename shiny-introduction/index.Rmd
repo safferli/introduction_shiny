@@ -86,11 +86,10 @@ background-size: 100%;
 
 ## Data are treasures?
 
-- get data
-- analyse it!
-     - if you have a manager: pretty trumps content!
-- many different libraries etc (hicharts etc)
-- R is known for being great with graphs
+- not data are treasures, but analysis thereof
+    - if you have a manager: pretty trumps content
+- many different libraries available
+- R is known for being great with stats and graphs
 
 ***
 
@@ -123,7 +122,6 @@ http://shiny.rstudio.com/
 ***
 
 <img src="assets/img/shiny.gif" class="gif150" />
-
 
 
 ---

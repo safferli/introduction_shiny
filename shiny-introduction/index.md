@@ -71,27 +71,25 @@ background-size: 100%;
 ## Christoph Safferling
 
 - since 2012: Head of Game Analytics at Blue Byte
-- PhD in economics: [Three Essays on the Economics of Online Games]
-  (http://kops.uni-konstanz.de/handle/123456789/17259?locale-attribute=en)
+- PhD in economics: [Three Essays on the Economics of Online Games](http://kops.uni-konstanz.de/handle/123456789/17259?locale-attribute=en)
 - research specialties: personnel economics, incentive theory, industrial organisation
 - academic papers available at [repec.org](https://ideas.repec.org/f/psa961.html)
 - contact:
-  - mail: christoph.safferling@ubisoft.com
-  - LinkedIn: https://www.linkedin.com/in/safferling 
-  - Twitter: [@safferli](https://twitter.com/safferli) 
-  - Github: [@safferli](https://github.com/safferli)
-  - this talk: https://github.com/safferli/introduction_shiny
+    - mail: christoph.safferling@ubisoft.com
+    - LinkedIn: https://www.linkedin.com/in/safferling 
+    - Twitter: [@safferli](https://twitter.com/safferli) 
+    - Github: [@safferli](https://github.com/safferli)
+    - this talk: https://github.com/safferli/introduction_shiny
 
 
 --- &vertical
 
 ## Data are treasures?
 
-- get data
-- analyse it!
-     - if you have a manager: pretty trumps content!
-- many different libraries etc (hicharts etc)
-- R is known for being great with graphs
+- not data are treasures, but analysis thereof
+    - if you have a manager: pretty trumps content
+- many different libraries available
+- R is known for being great with stats and graphs
 
 ***
 
@@ -126,7 +124,6 @@ http://shiny.rstudio.com/
 <img src="assets/img/shiny.gif" class="gif150" />
 
 
-
 ---
 
 ## What is it good for? 
@@ -135,8 +132,8 @@ http://shiny.rstudio.com/
 - reporting 
 - dashboarding
 - provide non-specialist access to data
-- [make games](http://deanattali.com/blog/shiny-game-lightsout/)!
-- free!
+- [make games](http://deanattali.com/blog/shiny-game-lightsout/)
+- free
 
 
 ---
