@@ -11,7 +11,8 @@ library(ggplot2)
 library(grid)
 # library(xlsx)
 
-wd <- path.expand("~/Documents/github/introduction_shiny")
+#wd <- path.expand("~/Documents/github/introduction_shiny")
+wd <- "C:/github/introduction_shiny"
 setwd(wd)
 setwd("./acid_mission_dashboard/")
 load("acid_mission_dashboard.Rda")
